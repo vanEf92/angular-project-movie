@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { SpinnerService } from './Services/spinner.service';
+import { DataService } from './Services/data.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-project-movie';
+
+  constructor(
+    private SpinnerService: SpinnerService,
+    public DataService: DataService
+  ) { }
+
+  ngOnInit() {
+    // this.SpinnerService.start();
+    // setTimeout(() => {
+    //   this.SpinnerService.stop();
+    // }, 2000);
+  }
 }
